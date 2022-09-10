@@ -84,3 +84,26 @@ void instruction_pint(stack_t **stack, unsigned int line_counter)
 	}
 	printf("%d\n", (*stack)->n);
 }
+
+/**
+ * instruction_pop - removes the top element of the stack
+ * @stack: double pointer to the first node
+ * @line_counter: line on the file containing the implemented instruction
+ *
+ * Return: nothing
+ */
+
+void instruction_pop(stack_t** stack, unsigned int line_counter)
+{
+	stack_t* head;
+
+	if (stack == NULL || *stack == NULL)
+	{
+		printf("L%u: can't pop an empty stack\n", line_counter);
+		exit(EXIT_FAILURE);
+	}
+
+	head = *stack;
+	(*stack) = head->next;
+	free(head);
+}

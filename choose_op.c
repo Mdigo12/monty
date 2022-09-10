@@ -17,6 +17,7 @@ void choose_op(char* op, stack_t** stack, unsigned int line_counter)
 		{"push", instruction_push},
 		{"pall", instruction_pall},
 		{"pint", instruction_pint},
+		{"pop", instruction_pop},
 		{NULL, NULL}
 	};
 

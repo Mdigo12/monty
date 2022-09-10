@@ -75,5 +75,6 @@ void choose_op(char* op, stack_t** stack, unsigned int line_counter);
 void instruction_push(stack_t** stack, unsigned int line_counter);
 void instruction_pall(stack_t** stack, unsigned int line_counter);
 void instruction_pint(stack_t** stack, unsigned int line_counter);
+void instruction_pop(stack_t** stack, unsigned int line_counter);
 
 #endif /*MONTY_H*/
