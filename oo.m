@@ -1,6 +1,6 @@
-push 7$
-push 6$
-push 5$
-pall$
-pop
+push 1
+push 2
+push 3
+pall
+swap
 pall

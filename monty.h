@@ -76,5 +76,10 @@ void instruction_push(stack_t **stack, unsigned int line_counter);
 void instruction_pall(stack_t **stack, unsigned int line_counter);
 void instruction_pint(stack_t **stack, unsigned int line_counter);
 void instruction_pop(stack_t **stack, unsigned int line_counter);
+void instruction_swap(stack_t **stack, unsigned int line_counter);
+
+/*instruction2.c*/
+void instruction_add(stack_t **stack, unsigned int line_counter);
+void instruction_nop(stack_t **stack, unsigned int line_counter);
 
 #endif /*MONTY_H*/
