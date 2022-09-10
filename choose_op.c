@@ -4,12 +4,12 @@
  * choose_op - based on tokens from single line, decide what function to call
  * @stack: double pointer to head of stack data structure
  * @op: operator, aka token[0] from getline
- * @line_number: line in byte-code file being processed, zero indexed
+ * @line_counter: line in byte-code file being processed, zero indexed
  *
  * Return: int for mysterious purposes
  */
 
-void choose_op(char* op, stack_t** stack, unsigned int line_counter)
+void choose_op(char *op, stack_t **stack, unsigned int line_counter)
 {
 	int i;
 
@@ -26,8 +26,7 @@ void choose_op(char* op, stack_t** stack, unsigned int line_counter)
 		if (strcmp(op, all_ops[i].opcode) == 0)
 		{
 			/*Test*/
-			/*printf("option [%i] %s picked\n",
-			 *	i, all_ops[i].opcode);*/
+			/*printf("option [%i] %s picked\n",i, all_ops[i].opcode);*/
 			all_ops[i].f(stack, line_counter);
 			return;
 		}

@@ -22,6 +22,7 @@ void stack_init(stack_t **head)
 void free_all(void)
 {
 	stack_t *tmp1, *tmp2 = NULL;
+
 	tmp1 = *(glob.top);
 
 	/*Test*/
@@ -42,7 +43,7 @@ void free_all(void)
  * Return: EXIT_SUCCESS or EXIT_FAILURE
  */
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	stack_t *head;
 

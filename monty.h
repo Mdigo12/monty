@@ -68,13 +68,13 @@ void stack_init(stack_t **head);
 void free_all(void);
 
 /*to open and read the file and tokenize the contents */
-int process_file(char* filename, stack_t** stack_top);
-void choose_op(char* op, stack_t** stack, unsigned int line_counter);
+int process_file(char *filename, stack_t **stack_top);
+void choose_op(char *op, stack_t **stack, unsigned int line_counter);
 
 /*instruction1.c*/
-void instruction_push(stack_t** stack, unsigned int line_counter);
-void instruction_pall(stack_t** stack, unsigned int line_counter);
-void instruction_pint(stack_t** stack, unsigned int line_counter);
-void instruction_pop(stack_t** stack, unsigned int line_counter);
+void instruction_push(stack_t **stack, unsigned int line_counter);
+void instruction_pall(stack_t **stack, unsigned int line_counter);
+void instruction_pint(stack_t **stack, unsigned int line_counter);
+void instruction_pop(stack_t **stack, unsigned int line_counter);
 
 #endif /*MONTY_H*/

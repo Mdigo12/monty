@@ -8,13 +8,13 @@
  *
  * Return: return an error code or success
  */
-int process_file(char* filename, stack_t** stack)
+int process_file(char *filename, stack_t **stack)
 {
-	FILE* fp;
+	FILE *fp;
 	size_t len;
 	ssize_t read;
-	char* line = NULL;
-	char* op;
+	char *line = NULL;
+	char *op;
 	unsigned int line_counter = 0;
 
 	/*check if file exist*/

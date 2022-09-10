@@ -9,8 +9,8 @@
 
 void instruction_push(stack_t **stack, unsigned int line_counter)
 {
-	stack_t* head = malloc(sizeof(stack_t));
-	char* op;
+	stack_t *head = malloc(sizeof(stack_t));
+	char *op;
 	int num;
 
 	if (head == NULL)
@@ -52,7 +52,7 @@ void instruction_push(stack_t **stack, unsigned int line_counter)
  * Return: nothing
  */
 
-void instruction_pall(stack_t** stack, unsigned int line_counter)
+void instruction_pall(stack_t **stack, unsigned int line_counter)
 {
 	stack_t *head = *stack;
 	unsigned int i = 0;
@@ -93,9 +93,9 @@ void instruction_pint(stack_t **stack, unsigned int line_counter)
  * Return: nothing
  */
 
-void instruction_pop(stack_t** stack, unsigned int line_counter)
+void instruction_pop(stack_t **stack, unsigned int line_counter)
 {
-	stack_t* head;
+	stack_t *head;
 
 	if (stack == NULL || *stack == NULL)
 	{
