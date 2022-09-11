@@ -1,5 +1,6 @@
-
-push 3
+push 1
 push 2
-push fe
-pall$
+push -0
+push -111111110
+add
+pall

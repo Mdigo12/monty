@@ -22,7 +22,7 @@ void instruction_add(stack_t **stack, unsigned int line_counter)
 
 	if (len < 2)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", line_counter);
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 	head = *stack;
@@ -68,7 +68,7 @@ void instruction_sub(stack_t **stack, unsigned int line_counter)
 
 	if (len < 2)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", line_counter);
+		fprintf(stderr, "L%u: can't sub, stack too short\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 
@@ -107,7 +107,7 @@ void instruction_div(stack_t **stack, unsigned int line_counter)
 
 	if (len < 2)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", line_counter);
+		fprintf(stderr, "L%u: can't div, stack too short\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 
@@ -141,7 +141,7 @@ void instruction_mul(stack_t **stack, unsigned int line_counter)
 
 	if (len < 2)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", line_counter);
+		fprintf(stderr, "L%u: can't mul, stack too short\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 

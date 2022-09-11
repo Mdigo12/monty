@@ -27,7 +27,7 @@ void instruction_mod(stack_t **stack, unsigned int line_counter)
 
 	if (len < 2)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", line_counter);
+		fprintf(stderr, "L%u: can't mod, stack too short\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 
