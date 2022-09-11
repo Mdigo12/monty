@@ -87,3 +87,50 @@ void instruction_pstr(stack_t **stack, unsigned int line_counter)
 	}
 	printf("\n");
 }
+
+/**
+ * instruction_rotl - shuffles the top and the bottom elements.
+ * @stack: double pointer to the top element of the stack
+ * @line_counter: line on the file containing the implemented instruction
+ * Return: Nothing
+ */
+
+void instruction_rotl(stack_t **stack, unsigned int line_counter)
+{
+	stack_t *tmp = *stack, *new_top;
+
+	(void)line_counter;
+	if (*stack == NULL || (*stack)->next == NULL)
+		return;
+	new_top = (*stack)->next;
+	new_top->prev = NULL;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = *stack;
+	(*stack)->next = NULL;
+	(*stack)->prev = tmp;
+	(*stack) = new_top;
+}
+
+/**
+ * instruction_rotr - rotates the stack to the bottom.
+ * @stack: double pointer to the top element of the stack
+ * @line_counter: line on the file containing the implemented instruction
+ * Return: Nothing
+ */
+
+void instruction_rotr(stack_t **stack, unsigned int line_counter)
+{
+	stack_t *tmp = *stack;
+
+	(void)line_counter;
+	if (*stack == NULL || (*stack)->next == NULL)
+		return;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = *stack;
+	tmp->prev->next = NULL;
+	tmp->prev = NULL;
+	(*stack)->prev = tmp;
+	(*stack) = tmp;
+}
