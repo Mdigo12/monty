@@ -92,4 +92,9 @@ void instruction_pstr(stack_t **stack, unsigned int line_counter);
 void instruction_rotl(stack_t **stack, unsigned int line_counter);
 void instruction_rotr(stack_t **stack, unsigned int line_counter);
 
+/*instruction4.c*/
+void instruction_queue(stack_t **head, unsigned int counter);
+void instruction_stack(stack_t **head, unsigned int counter);
+void addqueue(stack_t **head, int n);
+
 #endif /*MONTY_H*/

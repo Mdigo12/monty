@@ -29,6 +29,8 @@ void choose_op(char *op, stack_t **stack, unsigned int line_counter)
 		{"pstr", instruction_pstr},
 		{"rotl", instruction_rotl},
 		{"rotr", instruction_rotr},
+		{"queue", instruction_queue},
+		{"stack", instruction_stack},
 		{NULL, NULL}
 	};
 

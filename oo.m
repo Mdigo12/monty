@@ -20,6 +20,8 @@ push 9
 
 pall
 
-rotr
+queue
+
+stack
 
 pall
