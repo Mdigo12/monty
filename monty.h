@@ -81,5 +81,11 @@ void instruction_swap(stack_t **stack, unsigned int line_counter);
 /*instruction2.c*/
 void instruction_add(stack_t **stack, unsigned int line_counter);
 void instruction_nop(stack_t **stack, unsigned int line_counter);
+void instruction_sub(stack_t **stack, unsigned int line_counter);
+void instruction_div(stack_t **stack, unsigned int line_counter);
+void instruction_mul(stack_t **stack, unsigned int line_counter);
+
+/*instruction3.c*/
+void instruction_mod(stack_t **stack, unsigned int line_counter);
 
 #endif /*MONTY_H*/

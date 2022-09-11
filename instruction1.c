@@ -10,16 +10,15 @@
 void instruction_push(stack_t **stack, unsigned int line_counter)
 {
 	stack_t *head = malloc(sizeof(stack_t));
-	char *op;
-	int num;
+	char *op, *endptr;
+	int num, base = 10;
+	long val;
 
 	if (head == NULL)
 	{
 		printf("Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	/*Test*/
-	/*printf("malloc allocated\n");*/
 
 	op = strtok(NULL, DELIMITERS);
 	if (op == NULL || stack == NULL)
@@ -28,15 +27,14 @@ void instruction_push(stack_t **stack, unsigned int line_counter)
 		exit(EXIT_FAILURE);
 	}
 
-	num = atoi(op);
-	/*test*/
-	/*printf("Num from atoi is: %d\n", num);*/
-	if (num == 0)
+	val = strtol(op, &endptr, base);
+	/*num = atoi(op);*/
+	if (op == endptr)
 	{
 		printf("L%d: usage: push integer\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
-
+	num = (int) val;
 	head->n = num;
 	head->prev = NULL;
 	head->next = *stack;

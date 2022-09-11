@@ -21,6 +21,10 @@ void choose_op(char *op, stack_t **stack, unsigned int line_counter)
 		{"swap", instruction_swap},
 		{"add", instruction_add},
 		{"nop", instruction_nop},
+		{"sub", instruction_sub},
+		{"div", instruction_div},
+		{"mul", instruction_mul},
+		{"mod", instruction_mod},
 		{NULL, NULL}
 	};
 
