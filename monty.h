@@ -15,7 +15,7 @@
 #include <ctype.h>
 
 /*new line, space, tab, carriage return as delimiters*/
-#define DELIMITERS "\n \t\r"
+#define DELIMITERS "\n \t\r$"
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
