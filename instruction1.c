@@ -29,7 +29,7 @@ void instruction_push(stack_t **stack, unsigned int line_counter)
 
 	val = strtol(op, &endptr, base);
 	/*num = atoi(op);*/
-	if (op == endptr)
+	if (op == endptr && *endptr != '\0')
 	{
 		printf("L%d: usage: push integer\n", line_counter);
 		exit(EXIT_FAILURE);
