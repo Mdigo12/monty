@@ -62,3 +62,28 @@ void instruction_pchar(stack_t **stack, unsigned int line_counter)
 	}
 	printf("%c\n", h->n);
 }
+
+/**
+ * instruction_pstr - prints the string starting at the top of the stack.
+ * @stack: double pointer to the top element of the stack
+ * @line_counter: line on the file containing the implemented instruction
+ * Return: Nothing
+ */
+
+void instruction_pstr(stack_t **stack, unsigned int line_counter)
+{
+	stack_t *h = *stack;
+
+	(void)line_counter;
+	while (h)
+	{
+		if (h->n == 48 || h->n < 33 || h->n > 126 || stack == NULL || *stack == NULL)
+		{
+			printf("\n");
+			return;
+		}
+		printf("%c", h->n);
+		h = h->next;
+	}
+	printf("\n");
+}
