@@ -16,14 +16,14 @@ void instruction_push(stack_t **stack, unsigned int line_counter)
 
 	if (head == NULL)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
 	op = strtok(NULL, DELIMITERS);
 	if (op == NULL || stack == NULL)
 	{
-		printf("L%u: usage: push integer\n", line_counter);
+		fprintf(stderr, "L%u: usage: push integer\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 
@@ -31,7 +31,7 @@ void instruction_push(stack_t **stack, unsigned int line_counter)
 	/*num = atoi(op);*/
 	if (op == endptr || *endptr != '\0')
 	{
-		printf("L%d: usage: push integer\n", line_counter);
+		fprintf(stderr, "L%d: usage: push integer\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 	num = (int) val;
@@ -77,7 +77,7 @@ void instruction_pint(stack_t **stack, unsigned int line_counter)
 {
 	if (stack == NULL || *stack == NULL)
 	{
-		printf("L%u: can't pint, stack empty\n", line_counter);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*stack)->n);
@@ -97,7 +97,7 @@ void instruction_pop(stack_t **stack, unsigned int line_counter)
 
 	if (stack == NULL || *stack == NULL)
 	{
-		printf("L%u: can't pop an empty stack\n", line_counter);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 
@@ -128,7 +128,7 @@ void instruction_swap(stack_t **stack, unsigned int line_counter)
 
 	if (len < 2)
 	{
-		printf("L%u: can't swap, stack too short\n", line_counter);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 

@@ -41,7 +41,7 @@ void choose_op(char *op, stack_t **stack, unsigned int line_counter)
 
 	if (strlen(op) != 0 && op[0] != '#')
 	{
-		printf("L%u: unknown instruction %s\n", line_counter, op);
+		fprintf(stderr, "L%u: unknown instruction %s\n", line_counter, op);
 		exit(EXIT_FAILURE);
 	}
 }
