@@ -25,6 +25,7 @@ void choose_op(char *op, stack_t **stack, unsigned int line_counter)
 		{"div", instruction_div},
 		{"mul", instruction_mul},
 		{"mod", instruction_mod},
+		{"pchar", instruction_pchar},
 		{NULL, NULL}
 	};
 

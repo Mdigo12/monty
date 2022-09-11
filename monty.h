@@ -87,5 +87,9 @@ void instruction_mul(stack_t **stack, unsigned int line_counter);
 
 /*instruction3.c*/
 void instruction_mod(stack_t **stack, unsigned int line_counter);
+void instruction_pchar(stack_t **stack, unsigned int line_counter);
+void instruction_pstr(stack_t **stack, unsigned int line_counter);
+void instruction_rotl(stack_t **stack, unsigned int line_counter);
+void instruction_rotr(stack_t **stack, unsigned int line_counter);
 
 #endif /*MONTY_H*/

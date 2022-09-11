@@ -37,3 +37,28 @@ void instruction_mod(stack_t **stack, unsigned int line_counter)
 	*stack = head->next;
 	free(head);
 }
+
+/**
+ * instruction_pchar - prints the char at the top of the stack.
+ * @stack: double pointer to the top element of the stack
+ * @line_counter: line on the file containing the implemented instruction
+ * Return: Nothing
+ */
+
+void instruction_pchar(stack_t **stack, unsigned int line_counter)
+{
+	stack_t *h = *stack;
+
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_counter);
+		exit(EXIT_FAILURE);
+	}
+
+	if (h->n < 33 || h->n > 126)
+	{
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_counter);
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", h->n);
+}
