@@ -18,7 +18,7 @@ void instruction_mod(stack_t **stack, unsigned int line_counter)
 	{
 		if (head->n == 0)
 		{
-			printf("L%u: division by zero\n", line_counter);
+			fprintf(stderr, "L%u: division by zero\n", line_counter);
 			exit(EXIT_FAILURE);
 		}
 		head = head->next;
@@ -27,7 +27,7 @@ void instruction_mod(stack_t **stack, unsigned int line_counter)
 
 	if (len < 2)
 	{
-		printf("L%u: can't swap, stack too short\n", line_counter);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_counter);
 		exit(EXIT_FAILURE);
 	}
 
